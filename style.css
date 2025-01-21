@@ -1,23 +1,31 @@
-
 * {
-    margin-top: 5px;
+    margin: 0;
     padding: 0;
-    font-family: "Epilogue", serif;
+    font-family: "Epilogue", Arial, sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
-.parent{
+
+body {
+    background: linear-gradient(135deg, #f3f4f6, #ffffff);
+    color: #333;
+    line-height: 1.6;
+}
+
+.parent {
     display: flex;
     flex-direction: column;
     height: 100vh;
-
 }
-.header {
 
+.header {
     display: flex;
     justify-content: space-between;
-    padding: 0 1rem;
-
+    margin: 10px;
+    flex-grow: 1;
+    width: 1150px;
+    position: fixed;
+    top: 0;
 
 }
 
@@ -26,7 +34,7 @@
     align-self: center;
 }
 
-.dropNav, .loginReg {
+.dropNav {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,7 +42,6 @@
     align-self: center;
     opacity: 80%;
     gap: 1rem;
-
 }
 
 .dropNav svg {
@@ -51,16 +58,14 @@
     opacity: 1;
     cursor: pointer;
     font-weight: bolder;
+    color:black;
 }
-
 
 .dropdown {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-
 }
-
 
 .loginReg {
     display: flex;
@@ -70,8 +75,8 @@
     width: auto;
     border-radius: 5px;
     opacity: 80%;
-
 }
+
 #login:hover, #register:hover {
     opacity: 1;
     cursor: pointer;
@@ -82,39 +87,44 @@
     box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
     transition: box-shadow .2s;
 }
-.centerPage{
+
+.centerPage {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     gap: 1rem;
     padding: 2rem;
-    margin-bottom: 10px;
-
+    margin: 30px;
 }
+
 .centerPage img {
     display: block;
-    width: 100%; /* Makes the image take up the full width of the container */
-    max-width: 500px; /* Prevents the image from exceeding a certain width */
+    width: 100%;
+    max-width: 500px;
     height: auto;
     object-fit: cover;
     margin: 10px;
 
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
     height: 100vh;
     align-items: center;
     justify-content: center;
+    max-width: 600px;
+    text-align: center;
+}
 
+.content h1 {
+    font-size: 6.3rem;
+    font-weight: 700;
 }
-.content h1{
-    font-size:6.3rem;
-    font-weight:700;
-}
-.content p{
+
+.content p {
     font-size: 18px;
     font-weight: 500;
     opacity: 75%;
