@@ -8,28 +8,45 @@
 }
 
 body {
-
-
-    line-height: 1.6;
-    color:#1A1F36;
+    background-color: white;
 }
-
+.moveCurs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: 650px;
+    border-radius: 100%;
+    background-image: linear-gradient(#1100ff 10%, #ff00f2);
+    filter: blur(250px);
+    transition: all 450ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    z-index: -1;
+}
 .parent {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    /*overflow: hidden;*/
+    overflow: hidden;
+
 }
 
 .header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap:1rem;
-    position: fixed;
+    gap: 1rem;
+    position: sticky;
     top: 0;
-    width: 100%;
-    flex-wrap: wrap;
+    background-color: white; /* Background color */
+    color: black;
+    padding: 10px 20px;
+    z-index: 1000;
+
 }
 
 .logo {
@@ -59,10 +76,12 @@ body {
 svg {
     transition: transform 0.3s ease;
 }
+
 .logo img {
     width: 200px;
 }
-#initiatives:hover, #about:hover, #company:hover, #projects:hover,#tech:hover, #login:hover, #register:hover {
+
+#initiatives:hover, #about:hover, #company:hover, #projects:hover, #tech:hover, #login:hover, #register:hover {
     opacity: 1;
     cursor: pointer;
     font-weight: bolder;
@@ -108,6 +127,18 @@ svg {
     margin: 30px;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    /*justify-content: center;*/
+    max-width: 600px;
+    text-align: center;
+    gap: 1.5rem
+
+}
+
 .image {
     display: block;
     width: 100%;
@@ -118,17 +149,6 @@ svg {
 
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    max-width: 600px;
-    text-align: center;
-
-
-}
 
 .content h1 {
     font-size: 50px;
@@ -151,28 +171,37 @@ svg {
     background-color: black;
     border-radius: 20px;
     width: 20%;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+
 }
 
 .button:hover {
     color: black;
     background-color: #D0E7FF;
-
     cursor: pointer;
     border: 2px solid black;
+    transform: scale(1.05); /* Slight scale effect for hover */
+
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+
 }
 
 .dropdown-button {
-    color:black;
+    color: black;
     opacity: 80%;
     cursor: pointer;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    gap:5px;
+    gap: 5px;
+
+
 }
 
 .dropdown-button svg {
@@ -186,7 +215,7 @@ svg {
     padding: 20px;
     flex-direction: column;
     height: auto;
-    width:auto;
+    width: auto;
     border-radius: 15px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 
@@ -199,12 +228,17 @@ svg {
     display: block;
     cursor: pointer;
     opacity: 80%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
 }
 
 .drops span:hover {
-   opacity: 1;
+    opacity: 1;
     border: 2px solid black;
     border-radius: 10px;
+    transform: scale(1.05);
+
+
 }
 
 .dropdown:hover .drops {
@@ -212,9 +246,75 @@ svg {
 }
 
 .dropdown:hover .dropdown-button {
-   opacity: 1;
+    opacity: 1;
 }
 
 .dropdown:hover .dropdown-button svg {
     transform: rotate(180deg); /* Rotate arrow on hover */
+}
+
+.footer {
+    color: black;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-conten: flex-start;
+    flex-direction: column;
+}
+
+.footer span {
+    font-size: 20px;
+    overflow: auto;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+
+}
+
+.socialMedia {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.socialMedia i {
+    transition: transform 0.3s, ease;
+    rotate: 360deg;
+}
+
+#facebook:hover {
+    background-color: #1877F2;
+    transform: scale(1.2);
+}
+
+#twitter:hover {
+    background-color: #1DA1F2;
+    transform: scale(1.2);
+
+}
+
+#instagram:hover {
+    background: linear-gradient(45deg, #C32AA3, #E95950);
+    transform: scale(1.2);
+
+}
+
+#youtube:hover {
+    background-color: #FF0000;
+    transform: scale(1.2);
+
 }
