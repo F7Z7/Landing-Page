@@ -24,6 +24,11 @@
             <div class="logo">
                 <img src="./images/Stark_Industries.png" alt="logo">
             </div>
+            <div class="mobileMenu" onclick="toggleMenu(this)">
+                <div id="bar1"></div>
+                <div id="bar2"></div>
+                <div id="bar3"></div>
+            </div>
             <div id="tech" class="dropdown">
                 <button class="dropdown-button">
                     <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +122,13 @@
                 </div>
             </div>
             <div class="image">
-                <img src="images/tony_stark.png" alt="TONY STARK">
+                <picture>
+                    <source srcset="images/tony_mobile.jpg" media="(max-width: 500px)">
+
+                    <source srcset="images/tony_stark.png">
+
+                    <img src="images/tony_stark.png" alt="TONY STARK">
+                </picture>
                 <div class="overlay">
                     "Even dead I'm the hero"
                     <a href="https://twitter.com/tonystark" target="_blank">Visit Profile</a>
