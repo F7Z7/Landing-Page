@@ -34,7 +34,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    overflow: hidden;
+    /*overflow: hidden;*/
 
 
 }
@@ -137,7 +137,7 @@ svg {
     justify-content: flex-start;
     max-width: 600px;
     gap: 1.5rem;
-    height: auto; /* Remove full viewport height */
+    height: auto;
 }
 
 .image {
@@ -146,14 +146,14 @@ svg {
     max-width: 300px;
     display: inline-block;
     overflow: hidden;
-    border-radius: 10px; /* Optional: Rounded edges */
+    border-radius: 10px;
 }
 
 .image img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 10px; /* Matches container */
+    border-radius: 10px;
 }
 
 /* The overlay effect */
@@ -251,6 +251,8 @@ svg {
     width: auto;
     border-radius: 15px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
 
 }
 
@@ -358,7 +360,16 @@ svg {
 
 }
 
-@media (max-width: 410px) {
+@media (max-width: 1080px) {
+    .moveCurs{
+        display: none;
+
+    }
+    body{
+        background: linear-gradient(to right, #ff007f, #5900ff);
+
+
+    }
     .mobileMenu {
         display: block; /* Show the mobile menu */
     }
@@ -395,28 +406,27 @@ svg {
     .image {
         width: 100%;
     }
+    .logo{
+        display: block;
+        text-align: left;
+    }
 
+    .dropdown,.loginReg {
+        display: none;
+    }
+    .respDropdown{
 
-    .dropdownMobile {
-        background-color: red;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-
-
-
     }
-
-    .dropdownMobile:hover .drops {
+    .dropdownMobileHeader {
         display: flex;
+        flex-direction: row;
+        margin:20px;
+        justify-content:space-between;
+        align-items:center;
+        width:100%;
     }
 
-    .dropdownMobile:hover .dropdown-button {
-        opacity: 1;
-    }
-
-    .dropdownMobile:hover .dropdown-button svg {
-        transform: rotate(180deg); /* Rotate arrow on hover */
-    }
 
 }

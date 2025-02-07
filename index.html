@@ -20,80 +20,82 @@
 <main>
     <div class="moveCurs"></div>
     <div class="parent">
-        <div class="header dropdownMobile">
-            <div class="logo">
-                <img src="./images/Stark_Industries.png" alt="logo">
-            </div>
+        <div class="header">
+            <div class="dropdownMobileHeader">
+                <div class="logo">
+                    <img src="./images/Stark_Industries.png" alt="logo">
+                </div>
 
                 <div class="mobileMenu" onclick="toggleMenu(this)">
                     <div id="bar1"></div>
                     <div id="bar2"></div>
                     <div id="bar3"></div>
                 </div>
+            </div>
 
-                <div id="tech" class="dropdown">
-                    <button class="dropdown-button">
-                        <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/>
-                        </svg>
-                        Technologies
-                    </button>
+            <div id="tech" class="dropdown respDropdown">
+                <button class="dropdown-button">
+                    <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/>
+                    </svg>
+                    Technologies
+                </button>
 
-                    <div class="drops hidden" id="nav1">
-                        <span>Friday</span>
-                        <span>Arc Reactor</span>
-                        <span>EDITH</span>
-                    </div>
-
-                </div>
-                <div id="projects" class="dropdown">
-                    <button class="dropdown-button">
-                        <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/>
-                        </svg>
-                        Projects
-
-                    </button>
-                    <div class="drops hidden" id="nav2">
-                        <span>Space Exploration</span>
-                        <span>Stark Resilient</span>
-                        <span>Next-Gen Transportation</span>
-                    </div>
+                <div class="drops hidden" id="nav1">
+                    <span>Friday</span>
+                    <span>Arc Reactor</span>
+                    <span>EDITH</span>
                 </div>
 
-                <div id="initiatives" class="dropdown">
-                    <button class="dropdown-button">
-                        <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/>
-                        </svg>
-                        Initiatives
-                    </button>
-                    <div class="drops hidden" id="nav3">
-                        <span> LunarTech</span>
-                        <span> Neurals </span>
-                        <span> Aquaris </span>
-                    </div>
-                </div>
+            </div>
+            <div id="projects" class="dropdown respDropdown">
+                <button class="dropdown-button">
+                    <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/>
+                    </svg>
+                    Projects
 
-                <div id="about" class="dropdown">
-                    <button class="dropdown-button">
-                        <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/>
-                        </svg>
-                        About Us
-                    </button>
-                    <div class="drops hidden" id="nav4">
-                        <span>Our Legacy</span>
-                        <span>The Stark Team</span>
-                        <span>Mission & Vision</span>
-                        <span>Achievements</span>
-                    </div>
+                </button>
+                <div class="drops hidden" id="nav2">
+                    <span>Space Exploration</span>
+                    <span>Stark Resilient</span>
+                    <span>Next-Gen Transportation</span>
                 </div>
+            </div>
 
-                <div class="loginReg">
-                    <a id="login">Login</a>
-                    <a id="register">Register</a>
+            <div id="initiatives" class="dropdown respDropdown">
+                <button class="dropdown-button">
+                    <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/>
+                    </svg>
+                    Initiatives
+                </button>
+                <div class="drops hidden" id="nav3">
+                    <span> LunarTech</span>
+                    <span> Neurals </span>
+                    <span> Aquaris </span>
                 </div>
+            </div>
+
+            <div id="about" class="dropdown respDropdown">
+                <button class="dropdown-button">
+                    <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/>
+                    </svg>
+                    About Us
+                </button>
+                <div class="drops hidden" id="nav4">
+                    <span>Our Legacy</span>
+                    <span>The Stark Team</span>
+                    <span>Mission & Vision</span>
+                    <span>Achievements</span>
+                </div>
+            </div>
+
+            <div class="loginReg respDropdown">
+                <a id="login">Login</a>
+                <a id="register">Register</a>
+            </div>
         </div>
         <div class="centerPage">
             <div class="content">
@@ -125,7 +127,7 @@
             </div>
             <div class="image">
                 <picture>
-                    <source srcset="images/tony_mobile.jpg" media="(max-width: 500px)">
+                    <source srcset="images/tony_mobile.jpg" media="(max-width: 1080px)">
 
                     <source srcset="images/tony_stark.png">
 
