@@ -232,7 +232,7 @@ svg {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    gap: 5px;
+    gap: 1rem;
 
 
 }
@@ -266,6 +266,7 @@ svg {
     transition: background-color 0.3s ease, transform 0.3s ease;
 
 }
+
 
 .drops span:hover {
     opacity: 1;
@@ -359,8 +360,18 @@ svg {
     display: none;
 
 }
-
+header {
+    display: none;
+}
 @media (max-width: 1080px) {
+    .header img{
+        display: none;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .moveCurs{
         display: none;
 
@@ -417,13 +428,13 @@ svg {
     .respDropdown{
 
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
     .dropdownMobileHeader {
         display: flex;
         flex-direction: row;
-        margin:20px;
-        justify-content:space-between;
+        gap:40%;
+        justify-content:space-around;
         align-items:center;
         width:100%;
     }

@@ -20,19 +20,22 @@
 <main>
     <div class="moveCurs"></div>
     <div class="parent">
-        <div class="header">
-            <div class="dropdownMobileHeader">
-                <div class="logo">
-                    <img src="./images/Stark_Industries.png" alt="logo">
-                </div>
-
-                <div class="mobileMenu" onclick="toggleMenu(this)">
-                    <div id="bar1"></div>
-                    <div id="bar2"></div>
-                    <div id="bar3"></div>
-                </div>
+        <header class="dropdownMobileHeader">
+            <div class="logo">
+                <img src="./images/Stark_Industries.png" alt="logo">
             </div>
 
+            <div class="mobileMenu" onclick="toggleMenu(this)">
+                <div id="bar1"></div>
+                <div id="bar2"></div>
+                <div id="bar3"></div>
+            </div>
+        </header>
+        <div class="header">
+            <div class="logo">
+                <img src="./images/Stark_Industries.png" alt="logo">
+            </div>
+            <!--            <div class="mobilehead">-->
             <div id="tech" class="dropdown respDropdown">
                 <button class="dropdown-button">
                     <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
@@ -91,11 +94,8 @@
                     <span>Achievements</span>
                 </div>
             </div>
-
-            <div class="loginReg respDropdown">
                 <a id="login">Login</a>
                 <a id="register">Register</a>
-            </div>
         </div>
         <div class="centerPage">
             <div class="content">
